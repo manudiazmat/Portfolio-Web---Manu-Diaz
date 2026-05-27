@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manu Díaz — Editorial Portfolio</title>
+  <meta name="description" content="Editorial portfolio of Manu Díaz, graphic designer focused on identity, illustration, posters, digital systems and art direction." />
+  <meta name="author" content="Manu Díaz" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="is-loading">
+  <div class="page-bg" aria-hidden="true">
+    <div class="page-bg__grain"></div>
+    <div class="page-bg__wash page-bg__wash--one"></div>
+    <div class="page-bg__wash page-bg__wash--two"></div>
+  </div>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursor-follower"></div>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__top">
+      <span>MANU DÍAZ</span>
+      <span>PORTFOLIO / 2026</span>
+    </div>
+    <div class="loader__bar"><span id="loader-fill"></span></div>
+    <span class="loader__count" id="loader-count">000</span>
+  </div>
+
+  <nav class="nav" id="main-nav" aria-label="Main navigation">
+    <a class="nav__brand" href="#hero" aria-label="DZMT Design home"><img src="assets/dzmt-logo.png" alt="DZMT Design" /></a>
+    <div class="nav__links">
+      <a href="#hero" data-nav="home">Home</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#experience" data-nav="experience">Experience</a>
+      <a href="#projects" data-nav="projects">Projects</a>
+      <a href="#contact" data-nav="contact">Contact</a>
+    </div>
+    <div class="nav__meta">
+      <span class="nav__dot"></span>
+      <span>Available / Spain</span>
+    </div>
+    <button class="nav__toggle" id="nav-toggle" aria-label="Open menu">
+      <span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main>
+    <section class="section hero hero--cinematic" id="hero">
+      <div class="hero__shell reveal">
+        <div class="hero__ambient" aria-hidden="true">
+          <span class="hero__orb hero__orb--blue"></span>
+          <span class="hero__orb hero__orb--orange"></span>
+          <span class="hero__orb hero__orb--black"></span>
+          <span class="hero__noise"></span>
+        </div>
+
+        <div class="hero__topline">
+          <span>PORTFOLIO / 2026</span>
+          <span>GRAPHIC DESIGN</span>
+          <span>ZARAGOZA · SPAIN</span>
+        </div>
+
+        <div class="hero__center">
+          <span class="hero__mini">MANU DÍAZ · DZMT DESIGN</span>
+          <h1 class="hero__headline">
+            <span>Visual systems</span>
+            <span>for identity,</span>
+            <span>image &amp; interaction.</span>
+          </h1>
+          <p class="hero__descriptor">Graphic designer working across branding, posters, illustration, editorial composition and digital interfaces.</p>
+          <div class="hero__actions">
+            <a class="pill pill--orange" href="#projects">View work</a>
+            <a class="pill pill--ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+
+        <div class="hero__bottom-strip">
+          <span>POSTERS</span>
+          <span>ILLUSTRATION</span>
+          <span>BRANDING</span>
+          <span>DIGITAL INTERFACE</span>
+          <span>ART DIRECTION</span>
+        </div>
+      </div>
+
+      <div class="scroll-note scroll-note--dark">
+        <span></span>
+        <p>Scroll to explore</p>
+      </div>
+    </section>
+
+    <section class="section section--panel section--dark" id="intro">
+      <div class="panel panel--intro reveal">
+        <div class="panel__header">
+          <span>Index & Philosophy</span>
+          <span>00 / 05</span>
+        </div>
+        <div class="intro-grid">
+          <div>
+            <h2>A clean visual archive shaped by rhythm, contrast and intention.</h2>
+          </div>
+          <div class="intro-copy">
+            <p>I work through visual systems: first defining atmosphere, then building the graphic language that makes a project feel coherent across image, type, interface and campaign pieces.</p>
+            <div class="stat-strip">
+              <div><strong>04</strong><span>Selected projects</span></div>
+              <div><strong>07</strong><span>Creative skills</span></div>
+              <div><strong>01</strong><span>Visual direction</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section interlude" id="interlude-1">
+      <div class="interlude__card interlude__card--center reveal">
+        <p><em>Identity is not decoration.</em><br />It is behaviour.</p>
+        <span>01 / Statement</span>
+      </div>
+    </section>
+
+    <section class="section section--panel section--light" id="about">
+      <div class="panel reveal">
+        <div class="panel__header">
+          <span>Creative practice</span>
+          <span>01 / About</span>
+        </div>
+        <div class="about-grid">
+          <div class="about-title">
+            <h2>ABOUT<br />MANU</h2>
+          </div>
+          <div class="about-text">
+            <p>I am Manu Díaz, a graphic designer interested in the way visual language can shape perception. My practice moves between identity, editorial composition, illustration, poster design and digital interfaces.</p>
+            <p>I like working with strong hierarchies, precise typography, clean structures and small unexpected details. Every project begins with a concept, but it only becomes real when image, rhythm and system start working together.</p>
+          </div>
+          <div class="skills-card glass-card">
+            <span class="mini-title">Core expertise</span>
+            <ul>
+              <li><span>01</span>Brand identity</li>
+              <li><span>02</span>Poster systems</li>
+              <li><span>03</span>Illustration</li>
+              <li><span>04</span>Editorial design</li>
+              <li><span>05</span>Digital interface</li>
+              <li><span>06</span>Art direction</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--panel section--light experience" id="experience">
+      <div class="panel reveal">
+        <div class="panel__header">
+          <span>Experience & Education</span>
+          <span>02 / Profile</span>
+        </div>
+        <div class="experience-grid">
+          <div class="experience-title">
+            <h2>EDUCATION<br />& SKILLS</h2>
+            <p>A concise profile of formal training, technical tools, AI-assisted workflows and complementary studies.</p>
+          </div>
+
+          <div class="experience-board">
+            <article class="edu-card edu-card--black">
+              <span class="mini-title">Education / 2020 — 2022</span>
+              <h3>CPA SALDUIE</h3>
+              <p>Higher Technician in 3D Animation, Games and Interactive Environments.</p>
+            </article>
+
+            <article class="edu-card edu-card--white">
+              <span class="mini-title">Education / 2022 — 2026</span>
+              <h3>HAC_R CREATIVO</h3>
+              <p>University Degree in Graphic Design.</p>
+            </article>
+
+            <article class="edu-card edu-card--orange skills-cloud">
+              <span class="mini-title">Skills</span>
+              <div>
+                <span>Procreate</span>
+                <span>Social Media</span>
+                <span>Digital Interface</span>
+                <span>Adobe CS</span>
+                <span>macOS / iPadOS / iOS</span>
+                <span>Figma</span>
+                <span>Blender</span>
+                <span>Artificial Intelligence / AI</span>
+              </div>
+            </article>
+
+            <article class="edu-card edu-card--grey">
+              <span class="mini-title">Soft skills</span>
+              <p>Creativity · Time management · Adaptability · Teamwork · Productivity.</p>
+            </article>
+
+            <article class="edu-card edu-card--wide">
+              <span class="mini-title">Additional studies</span>
+              <ul class="studies-list">
+                <li><span>Aug 2021</span> Character Design for Concept Art</li>
+                <li><span>Aug 2021</span> Illustration for Comics: Anatomy of a Superhero</li>
+                <li><span>Aug 2021</span> Digital Tattoo Design and Illustration with Procreate</li>
+                <li><span>May — Jun 2026</span> LVMH My Certificate</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section interlude interlude--wheel" id="interlude-2">
+      <div class="wheel-reference reveal" aria-hidden="true">
+        <span class="wheel-reference__dot"></span>
+        <div class="wheel-reference__mask">
+          <div class="wheel-reference__track">
+            <span>Posters</span>
+            <span>Illustrations</span>
+            <span>OVRKLL Brand</span>
+            <span>ARCHETYPE Brand</span>
+            <span>Editorial Systems</span>
+            <span>Visual Identity</span>
+            <span>Digital Interface</span>
+            <span>Art Direction</span>
+            <span>Campaign Design</span>
+            <span>Graphic Research</span>
+            <span>Posters</span>
+            <span>Illustrations</span>
+            <span>OVRKLL Brand</span>
+            <span>ARCHETYPE Brand</span>
+            <span>Editorial Systems</span>
+            <span>Visual Identity</span>
+            <span>Digital Interface</span>
+            <span>Art Direction</span>
+            <span>Campaign Design</span>
+            <span>Graphic Research</span>
+          </div>
+        </div>
+      </div>
+      <div class="interlude__card reveal">
+        <p>Designing systems with<br /><em>atmosphere, rhythm</em><br />and intention.</p>
+        <span>02 / Statement</span>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects">
+      <div class="projects__header reveal">
+        <span class="eyebrow">Selected archive</span>
+        <h2>WORK</h2>
+      </div>
+
+      <div class="projects__list">
+        <article class="project-block reveal" data-project="posters">
+          <div class="project-block__num">01</div>
+          <div class="project-block__main">
+            <h3>Posters</h3>
+            <p>Graphic compositions focused on rhythm, scale, contrast and visual tension.</p>
+          </div>
+          <div class="project-block__tags">
+            <span>Poster</span><span>Type</span><span>Composition</span>
+          </div>
+          <button class="project-block__arrow gallery-trigger" data-gallery="posters" aria-label="Open Posters gallery">↗</button>
+        </article>
+
+        <article class="project-block reveal" data-project="illustrations">
+          <div class="project-block__num">02</div>
+          <div class="project-block__main">
+            <h3>Illustrations</h3>
+            <p>Illustrative pieces exploring character, gesture, visual storytelling and digital drawing.</p>
+          </div>
+          <div class="project-block__tags">
+            <span>Procreate</span><span>Drawing</span><span>Narrative</span>
+          </div>
+          <button class="project-block__arrow gallery-trigger" data-gallery="illustrations" aria-label="Open Illustrations gallery">↗</button>
+        </article>
+
+        <article class="project-block reveal" data-project="ovrkll">
+          <div class="project-block__num">03</div>
+          <div class="project-block__main">
+            <h3>OVRKLL Brand</h3>
+            <p>A bold brand system built around intensity, sharp contrast and a contemporary visual attitude.</p>
+          </div>
+          <div class="project-block__tags">
+            <span>Branding</span><span>Identity</span><span>Campaign</span>
+          </div>
+          <button class="project-block__arrow gallery-trigger" data-gallery="ovrkll" aria-label="Open OVRKLL gallery">↗</button>
+        </article>
+
+        <article class="project-block reveal" data-project="archetype">
+          <div class="project-block__num">04</div>
+          <div class="project-block__main">
+            <h3>ARCHETYPE Brand</h3>
+            <p>A clean identity system for a precise, minimal and structured brand universe.</p>
+          </div>
+          <div class="project-block__tags">
+            <span>Brand</span><span>System</span><span>Direction</span>
+          </div>
+          <button class="project-block__arrow gallery-trigger" data-gallery="archetype" aria-label="Open ARCHETYPE gallery">↗</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="section previews" id="previews">
+      <article class="preview-panel reveal" data-gallery="posters">
+        <div class="preview-panel__info">
+          <span class="eyebrow">Project 01 / Posters</span>
+          <h3>Posters</h3>
+          <p>Poster work gives me space to test visual hierarchy, typographic weight and the emotional temperature of an image. The result is direct, graphic and deliberately composed.</p>
+          <ul>
+            <li><span>Focus</span><strong>Composition</strong></li>
+            <li><span>Role</span><strong>Design · Art Direction</strong></li>
+            <li><span>Output</span><strong>Print · Digital Posters</strong></li>
+          </ul>
+        </div>
+        <button class="preview-panel__media media-card media-card--image media-card--posters gallery-trigger" data-gallery="posters">
+          <span>Open Posters gallery</span>
+        </button>
+      </article>
+
+      <article class="preview-panel preview-panel--reverse reveal" data-gallery="illustrations">
+        <div class="preview-panel__info">
+          <span class="eyebrow">Project 02 / Illustration</span>
+          <h3>Illustrations</h3>
+          <p>Illustration is where I build characters, textures and visual scenes with a more expressive voice, balancing detail, anatomy, gesture and atmosphere.</p>
+          <ul>
+            <li><span>Focus</span><strong>Digital Drawing</strong></li>
+            <li><span>Role</span><strong>Illustration · Concept</strong></li>
+            <li><span>Tools</span><strong>Procreate · Adobe CS</strong></li>
+          </ul>
+        </div>
+        <button class="preview-panel__media media-card media-card--image media-card--illustrations gallery-trigger" data-gallery="illustrations">
+          <span>Open Illustrations gallery</span>
+        </button>
+      </article>
+
+      <article class="preview-panel reveal" data-gallery="ovrkll">
+        <div class="preview-panel__info">
+          <span class="eyebrow">Project 03 / Brand system</span>
+          <h3>OVRKLL Brand</h3>
+          <p>OVRKLL is approached as a brand with visual pressure: sharp graphic decisions, condensed typography and a system that feels energetic without losing control.</p>
+          <ul>
+            <li><span>Focus</span><strong>Identity</strong></li>
+            <li><span>Role</span><strong>Branding · Campaign</strong></li>
+            <li><span>Output</span><strong>System · Assets · Direction</strong></li>
+          </ul>
+        </div>
+        <button class="preview-panel__media media-card media-card--image media-card--ovrkll gallery-trigger" data-gallery="ovrkll">
+          <span>Open OVRKLL gallery</span>
+        </button>
+      </article>
+
+      <article class="preview-panel preview-panel--reverse reveal" data-gallery="archetype">
+        <div class="preview-panel__info">
+          <span class="eyebrow">Project 04 / Brand system</span>
+          <h3>ARCHETYPE<br />Brand</h3>
+          <p>ARCHETYPE is built from restraint: a minimal identity with clear spacing, structured layouts and an understated visual tone designed to feel precise and timeless.</p>
+          <ul>
+            <li><span>Focus</span><strong>Visual System</strong></li>
+            <li><span>Role</span><strong>Identity · Editorial</strong></li>
+            <li><span>Output</span><strong>Guidelines · Applications</strong></li>
+          </ul>
+        </div>
+        <button class="preview-panel__media media-card media-card--image media-card--archetype gallery-trigger" data-gallery="archetype">
+          <span>Open ARCHETYPE gallery</span>
+        </button>
+      </article>
+    </section>
+
+    <section class="section contact section--panel section--dark" id="contact">
+      <div class="panel reveal">
+        <div class="panel__header">
+          <span>Contact archive</span>
+          <span>05 / End</span>
+        </div>
+        <div class="contact-grid">
+          <div>
+            <h2>LET’S BUILD<br />SOMETHING<br />VISUAL.</h2>
+            <p>Open to creative opportunities, selected collaborations and design projects involving identity, editorial systems, illustration, campaign assets and digital interfaces.</p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:manudiazmat@gmail.com"><span>Email</span><strong>manudiazmat@gmail.com</strong><i>↗</i></a>
+            <a href="https://www.instagram.com/dzmt.design" target="_blank" rel="noopener"><span>Instagram</span><strong>@dzmt.design</strong><i>↗</i></a>
+            <a href="https://www.linkedin.com/in/manuel-d%C3%ADaz-mateo-7ab257280?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener"><span>LinkedIn</span><strong>Manuel Díaz Mateo</strong><i>↗</i></a>
+            <a href="assets/CV-2026.pdf" target="_blank" rel="noopener" download><span>CV</span><strong>Download PDF</strong><i>↓</i></a>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <span>MANU DÍAZ — PORTFOLIO © 2026</span>
+      </footer>
+    </section>
+  </main>
+
+  <div class="gallery-modal" id="gallery-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project gallery">
+    <div class="gallery-modal__backdrop" data-close-gallery></div>
+    <div class="gallery-modal__panel">
+      <div class="gallery-modal__header">
+        <div>
+          <span class="eyebrow" id="gallery-kicker">Project gallery</span>
+          <h2 id="gallery-title">Gallery</h2>
+        </div>
+        <button class="gallery-modal__close" data-close-gallery aria-label="Close gallery">Close</button>
+      </div>
+      <div class="gallery-modal__grid" id="gallery-grid"></div>
+    </div>
+  </div>
+
+  <div class="carousel-modal" id="carousel-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project image carousel">
+    <div class="carousel-modal__backdrop" data-close-carousel></div>
+    <div class="carousel-modal__panel">
+      <div class="carousel-modal__header">
+        <div>
+          <span class="eyebrow" id="carousel-kicker">Project carousel</span>
+          <h2 id="carousel-title">Gallery</h2>
+        </div>
+        <button class="carousel-modal__close" data-close-carousel aria-label="Close carousel">Close</button>
+      </div>
+      <figure class="carousel-modal__figure">
+        <img id="carousel-image" src="" alt="" />
+        <figcaption>
+          <span id="carousel-counter">01 / 01</span>
+          <strong id="carousel-caption">Image</strong>
+        </figcaption>
+      </figure>
+      <div class="carousel-modal__controls">
+        <button type="button" id="carousel-prev" aria-label="Previous image">← Prev</button>
+        <button type="button" id="carousel-next" aria-label="Next image">Next →</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>
