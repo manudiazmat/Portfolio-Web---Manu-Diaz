@@ -1,0 +1,17 @@
+node_modules/
+.git/
+dist/
+build/
+.cache/
+.next/
+.nuxt/
+.DS_Store
+*.zip
+*.rar
+*.7z
+*.mp4
+*.mov
+*.avi
+*.psd
+*.ai
+*.blend
