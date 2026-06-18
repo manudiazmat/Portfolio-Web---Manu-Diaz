@@ -304,6 +304,7 @@ const galleryData = {
       audience: 'The aesthetic athlete, the creative professional and the aspirational younger community.',
       deliverables: ['Brand strategy', 'Visual identity', 'Campaign system', 'Landing page', 'Archetype Lab flagship concept', 'Retail and urban applications'],
       documentHref: 'assets/archetype-tfg.pdf',
+      portfolioHref: 'assets/Memoria tfg portfolio.pdf',
       documentLabel: 'Trabajo de Fin de Grado · Diseño Gráfico',
       documentMeta: '22-page project presentation · Manuel Díaz Mateo · 2026',
       claim: 'Pause. Then become.'
@@ -360,8 +361,8 @@ function initGallery() {
                 <p>${summary.description}</p>
               </div>
               <div class="project-story__actions">
-                <a href="${summary.documentHref}" target="_blank" rel="noopener">Open full document <i>↗</i></a>
-                <a href="${summary.documentHref}" target="_blank" rel="noopener" download>Download PDF <i>↓</i></a>
+                <a href="${summary.portfolioHref}" target="_blank" rel="noopener">Open full document <i>↗</i></a>
+                <a href="${summary.portfolioHref}" target="_blank" rel="noopener" download>Download PDF <i>↓</i></a>
               </div>
             </article>
             <article class="project-story__meta">
