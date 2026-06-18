@@ -142,6 +142,43 @@ function initOrganicHeroGradient() {
   requestAnimationFrame(tick);
 }
 
+
+/* Hero typewriter ---------------------------------------- */
+function initHeroTypewriter() {
+  const typed = $('#hero-typed');
+  if (!typed) return;
+
+  const fullText = typed.dataset.text || typed.textContent.trim();
+  if (!fullText) return;
+
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    typed.textContent = fullText;
+    return;
+  }
+
+  typed.textContent = '';
+  let index = 0;
+  let hasStarted = false;
+
+  function step() {
+    typed.textContent = fullText.slice(0, index);
+    if (index <= fullText.length) {
+      index += 1;
+      const char = fullText.charAt(index - 1);
+      const pause = /[,.&]/.test(char) ? 105 : char === ' ' ? 32 : 46;
+      window.setTimeout(step, pause);
+    }
+  }
+
+  function start() {
+    if (hasStarted) return;
+    hasStarted = true;
+    step();
+  }
+
+  window.setTimeout(start, 1850);
+}
+
 /* Navigation ---------------------------------------------- */
 function initNavigation() {
   const nav = $('#main-nav');
@@ -258,6 +295,19 @@ const galleryData = {
   archetype: {
     kicker: 'Project 04 / ARCHETYPE Brand',
     title: 'ARCHETYPE Brand',
+    summary: {
+      category: 'Premium sports sub-brand / Final Degree Project',
+      headline: 'A complete brand system created for a premium sports sub-brand inside the Adidas ecosystem.',
+      description: 'ARCHETYPE proposes a quieter, more precise territory within performance culture. Instead of spectacle and over-stimulation, the project builds a controlled editorial language based on process, discipline and visual clarity.',
+      scope: 'Research, strategy, identity, campaign, editorial web and physical experience.',
+      positioning: 'Technical performance + editorial aesthetic + everyday desirability.',
+      audience: 'The aesthetic athlete, the creative professional and the aspirational younger community.',
+      deliverables: ['Brand strategy', 'Visual identity', 'Campaign system', 'Landing page', 'Archetype Lab flagship concept', 'Retail and urban applications'],
+      documentHref: 'assets/archetype-tfg.pdf',
+      documentLabel: 'Trabajo de Fin de Grado · Diseño Gráfico',
+      documentMeta: '22-page project presentation · Manuel Díaz Mateo · 2026',
+      claim: 'Pause. Then become.'
+    },
     items: [
       { label: 'Landscape campaign key visual', src: 'assets/project-images/archetype-add.png' },
       { label: 'Flagship store concept', src: 'assets/project-images/archetype-lab.png' },
@@ -274,6 +324,7 @@ function initGallery() {
   const grid = $('#gallery-grid');
   const title = $('#gallery-title');
   const kicker = $('#gallery-kicker');
+  const intro = $('#gallery-intro');
   const carousel = $('#carousel-modal');
   const carouselImage = $('#carousel-image');
   const carouselCaption = $('#carousel-caption');
@@ -295,6 +346,54 @@ function initGallery() {
 
     kicker.textContent = data.kicker;
     title.textContent = data.title;
+
+    if (intro) {
+      const summary = data.summary;
+      if (summary) {
+        intro.classList.add('is-visible');
+        intro.innerHTML = `
+          <section class="project-story">
+            <article class="project-story__lead">
+              <div>
+                <span class="eyebrow">${summary.category}</span>
+                <h3>${summary.headline}</h3>
+                <p>${summary.description}</p>
+              </div>
+              <div class="project-story__actions">
+                <a href="${summary.documentHref}" target="_blank" rel="noopener">Open full document <i>↗</i></a>
+                <a href="${summary.documentHref}" target="_blank" rel="noopener" download>Download PDF <i>↓</i></a>
+              </div>
+            </article>
+            <article class="project-story__meta">
+              <div><span>Scope</span><strong>${summary.scope}</strong></div>
+              <div><span>Positioning</span><strong>${summary.positioning}</strong></div>
+              <div><span>Audience</span><strong>${summary.audience}</strong></div>
+            </article>
+            <article class="project-story__list">
+              <div>
+                <span>Main deliverables</span>
+                <ul class="project-story__tags">${summary.deliverables.map((tag) => `<li>${tag}</li>`).join('')}</ul>
+              </div>
+              <p><strong>${summary.claim}</strong> The project extends from strategic research and identity design to campaign thinking, digital presentation and the Archetype Lab flagship experience.</p>
+            </article>
+            <article class="project-story__document">
+              <div>
+                <span>Attached document</span>
+                <h3>${summary.documentLabel}</h3>
+                <p>${summary.documentMeta}</p>
+              </div>
+              <div class="project-story__actions">
+                <a href="${summary.documentHref}" target="_blank" rel="noopener">View dossier <i>↗</i></a>
+              </div>
+            </article>
+          </section>
+        `;
+      } else {
+        intro.classList.remove('is-visible');
+        intro.innerHTML = '';
+      }
+    }
+
     grid.innerHTML = data.items.map((item, index) => {
       const number = String(index + 1).padStart(2, '0');
       if (typeof item === 'object' && item.src) {
@@ -521,11 +620,11 @@ function boot() {
   initLoader();
   initPointer();
   initOrganicHeroGradient();
+  initHeroTypewriter();
   initNavigation();
   initReveals();
   initMediaLight();
   initGallery();
-  initCurvedWheel();
 }
 
 if (document.readyState === 'loading') {
